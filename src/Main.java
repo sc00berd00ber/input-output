@@ -1,15 +1,25 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.Scanner;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+public class Main {
+
+    public static void main(String[] args) {
+        double subtotal = 22.87;
+        double tax = subtotal * 0.0825;
+        double totalDue = subtotal + tax;
+        System.out.println("Total dues is: " + totalDue);
+        System.out.println("Total due is: " + String.format("%.2f", totalDue));
+
+        System.out.printf("Total due is: %.2f \n", totalDue);
+
+        int id = 10135;
+        String teamName = "Brandon Players";
+        float pay = 5239.77f;
+        System.out.printf("%s (id: %d) $ %.2f\n", teamName, id, pay);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+        System.out.println("Howdy " + name + ".");
+        System.out.printf("Howdy %s.\n", name);
     }
 }
